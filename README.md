@@ -2,7 +2,7 @@ Dron
 ====
 
 Dron (Dobi's Tron/Snake game) uses SFML 1.6 (http://www.sfml-dev.org) and is written in C++.
-It is licensed unter the GNU General Public License version 3 or later (see LICENSE).
+It is licensed unter the MIT License (see LICENSE).
 
 Dron is controlled via keyboard or joypad.
 It can be played by 1-6 players, human or computer steered.
