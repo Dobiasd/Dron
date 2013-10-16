@@ -15,7 +15,7 @@ SplashScreen::SplashScreen(const std::string& title) :
 {
 	typedef std::vector<std::string> Tips;
 	Tips tips;
-	tips.push_back("You can toggle between windowd and fullscreen mode\nby double clicking into the window.");
+	tips.push_back("You can toggle between windowed and fullscreen mode\nby double clicking into the window.");
 	tips.push_back(
 			"The Dron world is topologically designed as a torus.\nYou can wrap around (exit on the left, come back in on the right etc.).");
 	tips.push_back(
@@ -23,6 +23,7 @@ SplashScreen::SplashScreen(const std::string& title) :
 	tips.push_back(
 			"If the game runs too slow despite of you having set a high speed\ntry reducing the level for GPU based special effects (blur).");
 	tips.push_back("If you want to change the game speed during play\nyou can do so by using the plus and minus keys.");
+	tips.push_back("You can already set a direction to move\nbefore a round is started.");
 
 	std::random_device randomDevice;
 	std::mt19937 randomGenerator(randomDevice());
