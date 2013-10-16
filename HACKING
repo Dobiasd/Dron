@@ -1,0 +1,35 @@
+Overview:
+The game class delegates the main work to the currently used game state.
+These states inherit and implement an interface for receiving input,
+updating their data and displaying it, alowing the use of the Model-View-Controller pattern.
+In the play state class (where the actual tron playing happens) MVC is
+implemented via aquisition. Because of the stepwise nature of the gameplay,
+in this application the view is not informed by the model (observer pattern)
+about changes, but the view simply uses the model's data for its visualization when called. 
+The controller and view are connected to the model by acquaintance.
+Players hold an instance of a player controller derived from the abstract
+player controller class.
+An object of the menu class type can be filles with arbitrary menu items.
+The main menu owns such a menu and filles it with the game specific options.
+Further comments can be found in the particular header files.
+Please feel free to report any suggestions for improvement (see AUTHORS).
+I am always interested in learning new (and especially better ^_-) ways to solve problems. :)
+
+code conventions:
+- Standard C++11 is used in a manner that in can be compiled with
+    the GNU Compiler Collection 4.7 and Microsoft Visual C++ 2010 express.
+- Idiomatic C++ and heavy usage of the STL is preferred where possible.
+- Classes and functions which are possibly reusable for other games reside
+    in the global namespace. All Dron specific stuff is located in the namespace Dron.
+- Namespaces, class names and functions use UpperCamelCase,
+    variables (including parameters) use lowerCamelCase.
+- Member variables end with an underscore.
+- std::for_each with lambda is prefered over classical for loops,
+    because I think it expresses directly that each element is visited exactly once.
+    In a normal for loop you have to examine the whole body of the loop to be really sure (see Herb Sutter).
+- The code (indentation, line wrapping and so on) is initially formatted
+    by Eclipse's CDT (BSD/Allman style). You are of course free to use something else you like more. ;)
+- Random generators like std::mt19937 and distributions like std::uniform_int_distribution<> are mutable members,
+    because I think that the overloaded function call operator for generating a random number should be declared
+	to work on const objects in the C++ standard. An abstract dice and its probability distribution
+	is not changed by rolling it.
