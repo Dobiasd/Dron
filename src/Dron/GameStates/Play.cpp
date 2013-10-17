@@ -22,8 +22,8 @@ namespace Dron
 {
 
 Play::Play(const World& world, PlayerPtrs playerPtrs, float stepsPerSecond, double newItemProbability, int blurAmount) :
-		model_(world, playerPtrs, stepsPerSecond, newItemProbability), view_(model_, blurAmount), inputController_(
-				model_), paused_(true), stepsPerSecond_(stepsPerSecond), elapsedTimeSinceLastStep_(0.f), stepNum_(0)
+		stepsPerSecond_(stepsPerSecond), model_(world, playerPtrs), view_(model_, blurAmount),
+		inputController_(model_), paused_(true), elapsedTimeSinceLastStep_(0.f), stepNum_(0)
 {
 	logicControllerPtrs_.push_back(std::make_shared<PlayersNextPositionsCalculator>());
 	logicControllerPtrs_.push_back(std::make_shared<PlayersCollisionChecker>());

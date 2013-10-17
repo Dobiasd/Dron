@@ -17,7 +17,7 @@ class Play;
 class PlayModel
 {
 public:
-	PlayModel(const World& world, PlayerPtrs playerPtrs, float stepsPerSecond, double newItemProbability);
+	PlayModel(const World& world, PlayerPtrs playerPtrs);
 	bool Update(float elapsedTime, Play& play);
 	PlayerPtrs GetAlivePlayers() const;
 	World world_;

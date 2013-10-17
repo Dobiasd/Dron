@@ -13,7 +13,7 @@ bool Quit::Update(float)
 	return true;
 }
 
-bool Quit::Display(sf::RenderTarget& renderTarget) const
+bool Quit::Display(sf::RenderTarget&) const
 {
 	std::cout << "Quit." << std::endl;
 	return true;

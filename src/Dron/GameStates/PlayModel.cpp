@@ -8,7 +8,7 @@
 namespace Dron
 {
 
-PlayModel::PlayModel(const World& world, PlayerPtrs playerPtrs, float stepsPerSecond, double newItemProbability) :
+PlayModel::PlayModel(const World& world, PlayerPtrs playerPtrs) :
 		world_(world), playerPtrs_(playerPtrs)
 {
 }
