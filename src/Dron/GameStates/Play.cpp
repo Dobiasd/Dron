@@ -67,7 +67,6 @@ bool Play::Update(float elapsedTime)
 
 	// Move the game one step forward in time.
 	++stepNum_;
-	typedef std::vector<Position> Positions;
 
 	// Let all the logic controllers do their jobs.
 	std::for_each(std::begin(logicControllerPtrs_), std::end(logicControllerPtrs_),
