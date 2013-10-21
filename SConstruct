@@ -9,12 +9,11 @@ for root, dirnames, filenames in os.walk('src'):
         if fnmatch.fnmatch(filename, '*.cpp'):
             source_files.append(str(os.path.join(root, filename)))
 
-source_files = [s.replace('src', 'build', 1) for s in source_files]
-
-VariantDir('build', 'src', duplicate=0)
+build_dir = 'build'
 
 # Windows
 if sys.platform[:3] == 'win':
+	build_dir = 'build_win'
 	env = Environment(tools = ['mingw'])
 
 	# Insert your SFML paths here.
@@ -23,11 +22,13 @@ if sys.platform[:3] == 'win':
 
 
 # Linux etc.
-else:	
+else:
 	env = Environment()
-	env.Program(target='Dron', source=source_files)
 
+
+VariantDir(build_dir, 'src', duplicate=0)
+source_files = [s.replace('src', build_dir, 1) for s in source_files]
 
 env.Append(LIBS=['sfml-audio', 'sfml-graphics','sfml-window','sfml-system'])
 env.Append(CXXFLAGS='-std=c++11 -Wall -Wextra -pedantic -Werror')
-env.Program(target='Dron', source=source_files)
+env.Program(target='release/Dron', source=source_files)
