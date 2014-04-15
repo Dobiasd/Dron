@@ -11,7 +11,7 @@ namespace Dron
 {
 
 Player::Player(const std::string& name, const Position& initialPosition, const sf::Color& color,
-		const PlayerControllerPtr controllerPtr, ItemPtrs::size_type maxItems, Positions::size_type minLength) :
+		const PlayerControllerPtr& controllerPtr, ItemPtrs::size_type maxItems, Positions::size_type minLength) :
 		name_(name), positions_(1, initialPosition), color_(color), controllerPtr_(controllerPtr), alive_(true), maxItems_(
 				maxItems), minLength_(minLength), shrinkTailStepNum_(0)
 {

@@ -66,7 +66,7 @@ public:
 	{
 		return size_.y_;
 	}
-	void InsertItem(const ItemPtr itemPtr);
+	void InsertItem(const ItemPtr& itemPtr);
 	ItemPtrs& GetItemPtrs()
 	{
 		return itemPtrs_;
@@ -79,7 +79,7 @@ public:
 	{
 		return size_;
 	}
-	void AddAnimationPtr(const AnimationPtr ptr)
+	void AddAnimationPtr(const AnimationPtr& ptr)
 	{
 		animationPtrs_.push_back(ptr);
 	}

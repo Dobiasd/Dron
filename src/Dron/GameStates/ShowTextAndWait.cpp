@@ -7,7 +7,7 @@
 namespace Dron
 {
 
-ShowTextAndWait::ShowTextAndWait(const std::string& text, const sf::Color& color, const GameStatePtr nextStatePtr,
+ShowTextAndWait::ShowTextAndWait(const std::string& text, const sf::Color& color, const GameStatePtr& nextStatePtr,
 		float waitTime, const sf::Image& backgroundImage) :
 		text_(text), color_(color), nextStatePtr_(nextStatePtr), elapsedTimeSum_(0.f), waitTime_(waitTime), backgroundImage_(
 				backgroundImage)

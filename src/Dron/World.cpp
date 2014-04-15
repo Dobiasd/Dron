@@ -55,7 +55,7 @@ World::World(const Size& size, double wallAmount, double obstacleAmount) :
 	}
 }
 
-void World::InsertItem(const ItemPtr itemPtr)
+void World::InsertItem(const ItemPtr& itemPtr)
 {
 	itemPtrs_.push_back(itemPtr);
 }

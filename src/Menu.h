@@ -15,7 +15,7 @@ class Menu
 public:
 	virtual void ProcessKeyCode(const sf::Key::Code&);
 	virtual void Display(sf::RenderTarget& renderTarget) const;
-	void AddMenuItem(const MenuItemPtr ptr)
+	void AddMenuItem(const MenuItemPtr& ptr)
 	{
 		menuItemsPtrs_.push_back(ptr);
 		itMenu = std::begin(menuItemsPtrs_);

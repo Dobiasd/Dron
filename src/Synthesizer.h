@@ -50,12 +50,12 @@ typedef std::shared_ptr<sf::SoundBuffer> SFSoundBufferPtr;
 typedef std::pair<SFSoundPtr, SFSoundBufferPtr> SFSoundPtrWithSoundBufferPtr;
 
 // Keep a generated sound in memory assiciated with a name
-void KeepSound(const SFSoundPtrWithSoundBufferPtr soundPtrWithSoundBufferPtr, const std::string name);
-void KeepSound(const Signal1D& signal, const std::string name);
+void KeepSound(const SFSoundPtrWithSoundBufferPtr& soundPtrWithSoundBufferPtr, const std::string& name);
+void KeepSound(const Signal1D& signal, const std::string& name);
 
 // Play sound previously put in memory with KeepSound by its name. Return immediatly.
-bool PlaySound(const std::string name);
-void PlaySound(const SFSoundPtrWithSoundBufferPtr soundPtrWithSoundBufferPtr);
+bool PlaySound(const std::string& name);
+void PlaySound(const SFSoundPtrWithSoundBufferPtr& soundPtrWithSoundBufferPtr);
 SFSoundPtrWithSoundBufferPtr ToSFSound(const Signal1D& signal);
 
 // Disable/Enable PlaySound

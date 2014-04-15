@@ -37,7 +37,7 @@ public:
 	virtual bool Display(sf::RenderTarget& renderTarget) const = 0;
 
 	// A state can give the word if another state shall take over.
-	void SetNextState(const GameStatePtr nextState)
+	void SetNextState(const GameStatePtr& nextState)
 	{
 		nextState_ = nextState;
 	}

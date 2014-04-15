@@ -14,7 +14,7 @@ class Vector2D
 public:
 	Vector2D(T x = 0, T Y = 0);
 	template<typename U>
-	Vector2D(const Vector2D<U> other);
+	Vector2D(const Vector2D<U>& other);
 
 	// Returns comma separated representation ("x, y").
 	std::string ToString() const;
@@ -32,7 +32,7 @@ Vector2D<T>::Vector2D(T x, T y) :
 
 template<typename T>
 template<typename U>
-Vector2D<T>::Vector2D(const Vector2D<U> other) :
+Vector2D<T>::Vector2D(const Vector2D<U>& other) :
 		x_(static_cast<T>(other.x_)), y_(static_cast<T>(other.y_))
 {
 }
