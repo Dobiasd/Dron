@@ -39,7 +39,7 @@ public:
 	typedef std::list<Position> Positions;
 
 	Player(const std::string& name, const Position& initialPosition, const sf::Color& color,
-			const PlayerControllerPtr controllerPtr, ItemPtrs::size_type maxItems, Positions::size_type minLength = 8);
+			const PlayerControllerPtr& controllerPtr, ItemPtrs::size_type maxItems, Positions::size_type minLength = 8);
 
 	// Forward keyboard inputs to controller.
 	void PushKeyInput(const sf::Key::Code& keyCode);

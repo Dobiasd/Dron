@@ -30,5 +30,5 @@ VariantDir(build_dir, 'src', duplicate=0)
 source_files = [s.replace('src', build_dir, 1) for s in source_files]
 
 env.Append(LIBS=['sfml-audio', 'sfml-graphics','sfml-window','sfml-system'])
-env.Append(CXXFLAGS='-std=c++11 -Wall -Wextra -pedantic -Werror')
+env.Append(CXXFLAGS='-std=c++11 -O3 -Wall -Wextra -pedantic -Werror')
 env.Program(target='release/Dron', source=source_files)

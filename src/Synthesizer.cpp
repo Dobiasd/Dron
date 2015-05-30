@@ -246,17 +246,17 @@ namespace
 SoundMap soundMap;
 }
 
-void KeepSound(const Signal1D& signal, const std::string name)
+void KeepSound(const Signal1D& signal, const std::string& name)
 {
 	KeepSound(ToSFSound(signal), name);
 }
 
-void KeepSound(const SFSoundPtrWithSoundBufferPtr soundPtrWithSoundBufferPtr, const std::string name)
+void KeepSound(const SFSoundPtrWithSoundBufferPtr& soundPtrWithSoundBufferPtr, const std::string& name)
 {
 	soundMap[name] = soundPtrWithSoundBufferPtr;
 }
 
-bool PlaySound(const std::string name)
+bool PlaySound(const std::string& name)
 {
 	auto it(soundMap.find(name));
 	if (it == std::end(soundMap))
@@ -270,7 +270,7 @@ namespace
 bool muted(false);
 }
 
-void PlaySound(const SFSoundPtrWithSoundBufferPtr soundPtrWithSoundBufferPtr)
+void PlaySound(const SFSoundPtrWithSoundBufferPtr& soundPtrWithSoundBufferPtr)
 {
 	if (!muted)
 		soundPtrWithSoundBufferPtr.first->Play();

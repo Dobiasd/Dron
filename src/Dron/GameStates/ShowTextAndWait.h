@@ -17,7 +17,7 @@ namespace Dron
 class ShowTextAndWait: public GameState
 {
 public:
-	ShowTextAndWait(const std::string& text, const sf::Color& color, const GameStatePtr nextStatePtr, float waitTime =
+	ShowTextAndWait(const std::string& text, const sf::Color& color, const GameStatePtr& nextStatePtr, float waitTime =
 			1.f, const sf::Image& backgroundImage = sf::Image());
 	virtual bool ProcessEvent(const sf::Event& event)
 	override;
