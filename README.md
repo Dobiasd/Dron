@@ -1,6 +1,8 @@
 Dron
 ====
 
+![screenshot](screenshot.png)
+
 Dron (Dobi's Tron/Snake game) uses SFML 1.6 (http://www.sfml-dev.org) and is written in C++.
 It is licensed unter the MIT License (see LICENSE).
 
@@ -15,7 +17,7 @@ to reduce the needed precision of input timing and thus weight the tactical aspe
 The Sound is generated via a software synthesizer and the graphics (lol) also get along
 without external data.
 GLSL is used for post processing the in game screen. If this is not possible on the the current hardware,
-the game simply runs without these effect. 
+the game simply runs without these effect.
 See HACKING for a broad overview of the source code.
 
 You are welcome to contact me for any kind of feedback (see AUTHORS).
