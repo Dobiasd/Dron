@@ -1,4 +1,4 @@
-# Dron – [download executable](http://www.daiw.de/Dron/Dron.zip)
+# Dron – [download executable](https://www.daiw.de/Dron/Dron.zip)
 
 ![screenshot](screenshot.png)
 
